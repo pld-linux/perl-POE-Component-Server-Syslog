@@ -6,7 +6,7 @@
 %define	pdir	POE
 %define	pnam	Component-Server-Syslog
 Summary:	POE::Component::Server::Syslog - syslog services for POE
-#Summary(pl):	
+Summary(pl):	POE::Component::Server::Syslog - us³ugi sysloga dla POE
 Name:		perl-POE-Component-Server-Syslog
 Version:	0.02
 Release:	1
@@ -29,8 +29,10 @@ This component provides very simple UDP Syslog services for POE (named
 pipe and other syslog interoperability features are expected in future
 versions).
 
-# %description -l pl
-# TODO
+%description -l pl
+Ten komponent udostêpnia bardzo proste us³ugi sysloga UDP dla POE
+(obs³ugi nazwanych potoków i innych mo¿liwo¶ci wspó³pracy z syslogiem
+mo¿na oczekiwaæ w kolejnych wersjach).
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
