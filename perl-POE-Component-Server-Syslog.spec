@@ -3,8 +3,8 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	POE
-%define	pnam	Component-Server-Syslog
+%define		pdir	POE
+%define		pnam	Component-Server-Syslog
 Summary:	POE::Component::Server::Syslog - syslog services for POE
 Summary(pl):	POE::Component::Server::Syslog - us³ugi sysloga dla POE
 Name:		perl-POE-Component-Server-Syslog
