@@ -8,12 +8,12 @@
 Summary:	POE::Component::Server::Syslog - syslog services for POE
 Summary(pl):	POE::Component::Server::Syslog - us³ugi sysloga dla POE
 Name:		perl-POE-Component-Server-Syslog
-Version:	0.02
-Release:	2
+Version:	0.03
+Release:	1
 License:	BSD-like
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	9d13ce4eb4d3c1ce308478952b68e1e5
+# Source0-md5:	fc38e76f5e3bd6b1f36b4fe3b6cee61b
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
