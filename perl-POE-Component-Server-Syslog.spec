@@ -36,6 +36,7 @@ mo¿na oczekiwaæ w kolejnych wersjach).
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
+rm t/0-signature.t	# caused errors with new MakeMaker
 
 %build
 %{__perl} Makefile.PL \
