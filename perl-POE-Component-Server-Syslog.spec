@@ -8,15 +8,16 @@
 Summary:	POE::Component::Server::Syslog - syslog services for POE
 Summary(pl):	POE::Component::Server::Syslog - us³ugi sysloga dla POE
 Name:		perl-POE-Component-Server-Syslog
-Version:	0.03
-Release:	2
+Version:	1.00
+Release:	1
 License:	BSD-like
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	fc38e76f5e3bd6b1f36b4fe3b6cee61b
+# Source0-md5:	a68c8258a7ece01f2fb72f8575b02260
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
+BuildRequires:	perl-Params-Validate
 BuildRequires:	perl-POE >= 0.24
 BuildRequires:	perl-Test-Simple
 BuildRequires:	perl-Time-modules
@@ -36,7 +37,6 @@ mo¿na oczekiwaæ w kolejnych wersjach).
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
-rm t/0-signature.t	# caused errors with new MakeMaker
 
 %build
 %{__perl} Makefile.PL \
@@ -59,6 +59,8 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc LICENSE 
-%{perl_vendorlib}/%{pdir}/*/*/*.pm
+%{perl_vendorlib}/POE/Component/Server/Syslog
+%{perl_vendorlib}/POE/Component/Server/Syslog.pm
+%{perl_vendorlib}/POE/Filter/Syslog.pm
 %attr(755,root,root) %{_examplesdir}/%{name}-%{version}
 %{_mandir}/man3/*
