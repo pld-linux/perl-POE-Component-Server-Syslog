@@ -6,7 +6,7 @@
 %define		pdir	POE
 %define		pnam	Component-Server-Syslog
 Summary:	POE::Component::Server::Syslog - syslog services for POE
-Summary(pl.UTF-8):   POE::Component::Server::Syslog - usługi sysloga dla POE
+Summary(pl.UTF-8):	POE::Component::Server::Syslog - usługi sysloga dla POE
 Name:		perl-POE-Component-Server-Syslog
 Version:	1.03
 Release:	1
