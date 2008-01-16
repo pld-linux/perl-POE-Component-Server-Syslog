@@ -8,12 +8,12 @@
 Summary:	POE::Component::Server::Syslog - syslog services for POE
 Summary(pl.UTF-8):	POE::Component::Server::Syslog - usługi sysloga dla POE
 Name:		perl-POE-Component-Server-Syslog
-Version:	1.03
+Version:	1.08
 Release:	1
 License:	BSD-like
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	0d8aa232320f982df738e7a819ddc7e0
+# Source0-md5:	89fb0d5147b279b4220d634782be7b1b
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
@@ -51,8 +51,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_examplesdir}
-cp -r samples $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+cp -r examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}/
 
 %clean
 rm -rf $RPM_BUILD_ROOT
