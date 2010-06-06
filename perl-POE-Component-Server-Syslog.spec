@@ -1,25 +1,25 @@
 #
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
-#
+
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	POE
 %define		pnam	Component-Server-Syslog
 Summary:	POE::Component::Server::Syslog - syslog services for POE
 Summary(pl.UTF-8):	POE::Component::Server::Syslog - usługi sysloga dla POE
 Name:		perl-POE-Component-Server-Syslog
-Version:	1.08
+Version:	1.18
 Release:	1
 License:	BSD-like
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/POE/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	89fb0d5147b279b4220d634782be7b1b
+# Source0-md5:	6f2738b00dc954cf0e1575f315398593
 URL:		http://search.cpan.org/dist/POE-Component-Server-Syslog/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
-BuildRequires:	perl-Params-Validate
 BuildRequires:	perl-POE >= 0.24
+BuildRequires:	perl-Params-Validate
 BuildRequires:	perl-Test-Simple
 BuildRequires:	perl-Time-modules
 %endif
@@ -38,7 +38,6 @@ można oczekiwać w kolejnych wersjach).
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
-mv t/000-signature.t{,.blah}
 
 %build
 %{__perl} Makefile.PL \
@@ -60,7 +59,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc LICENSE 
+%doc LICENSE
 %{perl_vendorlib}/POE/Component/Server/Syslog
 %{perl_vendorlib}/POE/Component/Server/Syslog.pm
 %{perl_vendorlib}/POE/Filter/Syslog.pm
