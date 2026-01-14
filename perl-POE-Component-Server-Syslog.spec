@@ -8,7 +8,7 @@ Summary:	POE::Component::Server::Syslog - syslog services for POE
 Summary(pl.UTF-8):	POE::Component::Server::Syslog - usługi sysloga dla POE
 Name:		perl-POE-Component-Server-Syslog
 Version:	1.18
-Release:	1
+Release:	2
 License:	BSD-like
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/POE/%{pdir}-%{pnam}-%{version}.tar.gz
